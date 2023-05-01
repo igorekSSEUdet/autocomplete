@@ -12,7 +12,7 @@ import java.util.*;
 public class FilterResultSearcher {
 
     private static final DataFilter dataFilter = new DataFilter();
-    private static final Map<Request,List<String[]>> cache = new HashMap<>();
+    private static final Map<Request,List<String[]>> cache = new WeakHashMap<>();
     private static final String filename = "C:\\Users\\mateb\\dev\\airport-quick-filter\\src\\fileSources\\airports.csv";
 
     public static List<String[]> getSearchResult(List<Integer> indexes, String filter) {
